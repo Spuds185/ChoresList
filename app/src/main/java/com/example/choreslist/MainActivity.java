@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import java.util.*;
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     //setting up a list view and mylist of stings to be used later
     ListView l;
-    List<String> MyList = new ArrayList<String>(Collections.singleton("first"));
+    List<String> MyList = new ArrayList<String>();
 
 
     @Override
@@ -31,12 +32,17 @@ public class MainActivity extends AppCompatActivity {
           R.layout.support_simple_spinner_dropdown_item,MyList);
         l.setAdapter(array);
 
+        //getting user intput from the editTextChore
+        EditText editTextChore = (EditText)findViewById(R.id.editTextChore);
+
+
         //creating a onclick for the addchores button
         Button addChores = (Button) findViewById(R.id.AddChoresButton);
         addChores.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //adding the string this to my list
-                MyList.add("this");
+                String strChores =  editTextChore.getText().toString();
+                MyList.add(strChores);
                 //letting the array adapter know that something changed and needs refreshing
                 array.notifyDataSetChanged();
             }
