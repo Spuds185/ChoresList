@@ -47,5 +47,15 @@ public class MainActivity extends AppCompatActivity {
                 array.notifyDataSetChanged();
             }
         });
+        Button DeleteChores = (Button) findViewById(R.id.DeleteChoresButton);
+        DeleteChores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String strChores =  editTextChore.getText().toString();
+                MyList.remove(strChores);
+                //letting the array adapter know that something changed and needs refreshing
+                array.notifyDataSetChanged();
+            }
+        });
     }
 }

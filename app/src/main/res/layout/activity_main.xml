@@ -40,7 +40,20 @@
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextChore"
-        app:layout_constraintVertical_bias="0.072" />
+        app:layout_constraintVertical_bias="0.066" />
+
+    <Button
+        android:id="@+id/DeleteChoresButton"
+        android:layout_width="177dp"
+        android:layout_height="61dp"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextChore"
+        app:layout_constraintVertical_bias="0.066" />
 </androidx.constraintlayout.widget.ConstraintLayout>
